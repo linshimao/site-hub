@@ -74,6 +74,9 @@ $lg-width: 1200px;
 }
 
 #changeBgImg {
+  position: absolute;
+    right: 15px;
+    bottom: 10px;
   .btn-img {
     cursor: pointer;
     width: 20px;
