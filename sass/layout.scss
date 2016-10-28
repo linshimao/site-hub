@@ -75,8 +75,9 @@ $lg-width: 1200px;
 
 #changeBgImg {
   position: absolute;
-    right: 15px;
-    bottom: 10px;
+  right: 25px;
+  bottom: 30px;
+  -webkit-animation: scroll 2s linear infinite;
   .btn-img {
     cursor: pointer;
     width: 20px;
@@ -84,6 +85,18 @@ $lg-width: 1200px;
     @include sm {}
     @include md {}
     @include lg {}
+  }
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  50% {
+    -weblit-transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
   }
 }
 
