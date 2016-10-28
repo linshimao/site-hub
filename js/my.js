@@ -15,21 +15,15 @@ changeBgImg();
 */
 //切换壁纸(并且将生成的随机数存入cookie)
 $(function () {
-  if ($.cookie("bgUrl") == undefined) {
-    $("#wrap").css("backgroundImage", "url(img/back.jpg)");
-  } else {
-    $("#wrap").css("backgroundImage", "url(http://img.infinitynewtab.com/wallpaper/" + ckValue + ".jpg");
+  if ($.cookie('bgUrl')) {
+    $("#wrap").css("backgroundImage", "url(http://img.infinitynewtab.com/wallpaper/" + $.cookie("bgUrl").toString().split("bgUrl=").join('') + ".jpg");
   }
-  $(".btn-img:eq(0)").on("click", function () {
-    var randomNumber = Math.ceil((Math.random() * 4049)) + 1;
-    console.log(randomNumber);
-    $.cookie("bgUrl", randomNumber, {
+  $(".btn-img:eq(0)").click(function () {
+    randomNumber = Math.ceil((Math.random() * 4049)) + 1;
+    $.cookie('bgUrl', randomNumber, {
       expires: 365
     });
-    var ckValue = $.cookie("bgUrl", randomNumber).toString();
-    var ckValue1 = ckValue.split("bgUrl=").join('');
-    console.log(ckValue1);
-    $("#wrap").css("backgroundImage", "url(http://img.infinitynewtab.com/wallpaper/" + ckValue1 + ".jpg");
+    $("#wrap").css("backgroundImage", "url(http://img.infinitynewtab.com/wallpaper/" + $.cookie("bgUrl").toString().split("bgUrl=").join('') + ".jpg");
   });
 });
 
