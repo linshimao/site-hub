@@ -55,32 +55,27 @@
 
 #changeBgImg {
   position: absolute;
-  right: 25px;
-  bottom: 30px;
-  -webkit-animation: scroll 2s linear infinite;
+  right: 85px;
+  bottom: 59px;
 }
 #changeBgImg .btn-img {
+  position: absolute;
+  top: 0;
+  left: 0;
   cursor: pointer;
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
+  z-index: 100;
+  -webkit-animation: scroll 2s linear infinite;
 }
-@media (min-width: 768px) {
-  #changeBgImg .btn-img {
-    width: 40px;
-    height: 40px;
-  }
-}
-@media (min-width: 992px) {
-  #changeBgImg .btn-img {
-    width: 45px;
-    height: 45px;
-  }
-}
-@media (min-width: 1200px) {
-  #changeBgImg .btn-img {
-    width: 55px;
-    height: 55px;
-  }
+#changeBgImg #fengchegan {
+  z-index: 99;
+  width: 5px;
+  height: 30px;
+  background: #FEFEFE;
+  position: absolute;
+  top: 30px;
+  right: 7px;
 }
 
 @-webkit-keyframes scroll {
