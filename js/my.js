@@ -24,10 +24,20 @@ $(function () {
 			$("#changeBgImg .btn-img").removeClass("rotate");
 		}, 1000);
 		var randomNumber = Math.ceil((Math.random() * 4049)) + 1;
+		var img1 = new Image();
+		var imgArry = new Array();
 		$.cookie('bgUrl', randomNumber, {
 			expires: 365
 		});
-		$("#wrap").css("backgroundImage", "url(http://img.infinitynewtab.com/wallpaper/" + $.cookie("bgUrl").toString().split("bgUrl=").join('') + ".jpg");
+		img1.src = "http://img.infinitynewtab.com/wallpaper/" + $.cookie("bgUrl").toString().split("bgUrl=").join('') + ".jpg";
+		var Oimg = "url(" + img1.src + ")"
+		img1.onload = function () {
+			imgArry.push(Oimg);
+			console.log(imgArry[0]);
+			$("#wrap").css("backgroundImage", imgArry[0]);
+			console.log($("#wrap").css("backgroundImage"));
+		}
+
 	});
 });
 //判断图片是否加载完成
