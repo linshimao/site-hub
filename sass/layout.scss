@@ -85,7 +85,10 @@ $lg-width: 1200px;
 		width: 40px;
 		height: 40px;
 		z-index: 100;
-		-webkit-animation: scroll 2s linear infinite;
+//		
+	}
+	.rotate{
+		animation: scroll 2s linear infinite;
 	}
 	#fengchegan {
 		z-index: 99;
