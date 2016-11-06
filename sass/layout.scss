@@ -11,11 +11,14 @@ $lg-width: 1200px;
 #wrap {
 	width: 100%;
 	height: 100%;
-	background: url(../img/back.jpg) no-repeat center;
+	//	background: url(../img/back.jpg) no-repeat center;
 	position: absolute;
 	top: 0;
 	left: 0;
 	background-size: cover;
+	transition: all ease .3s;
+	-webkit-transition: all ease .3s;
+	-moz-transition: all ease .3s;
 }
 
 .nav-pills > li {
@@ -85,9 +88,9 @@ $lg-width: 1200px;
 		width: 40px;
 		height: 40px;
 		z-index: 100;
-//		
+		//		
 	}
-	.rotate{
+	.rotate {
 		animation: scroll 2s linear infinite;
 	}
 	#fengchegan {
@@ -110,6 +113,18 @@ $lg-width: 1200px;
 	}
 	100% {
 		-webkit-transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes bgImg {
+	0% {
+		-webkit-transform: scale(.8);
+	}
+	50% {
+		-weblit-transform: scale(.9);
+	}
+	100% {
+		-webkit-transform: scale(1.0);
 	}
 }
 
