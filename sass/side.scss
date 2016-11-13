@@ -1,0 +1,50 @@
+#sideToggle {
+			display: none;
+		}
+		
+		#sideToggle:checked + aside {
+			right: 0;
+		}
+		
+		#sideToggle:checked ~ #wrap-side {
+			padding-right: 220px;
+		}
+		
+		body > aside {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: -350px;
+			width: 350px;
+			background: #f1103a;
+			transition: 0.2s ease-out;
+			-webkit-transition: 0.2s ease-out;
+		}
+		
+		#wrap-side {
+			transition: 0.25s ease-out;
+			-webkit-transition: 0.25s ease-out;
+		}
+		
+		#wrap-side > label {
+			display: inline-block;
+		}
+		
+		#wrap-side > label {
+			position: absolute;
+			top: 30px;
+			right: 40px;
+			background: #f1103a;
+			border-radius: 50px;
+			color: #FFF;
+			cursor: pointer;
+			display: block;
+			font-family: Courier New;
+			font-size: 25px;
+			font-weight: bold;
+			width: 30px;
+			height: 30px;
+			line-height: 35px;
+			text-align: center;
+			text-shadow: 0 -4px;
+		}
