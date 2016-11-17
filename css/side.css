@@ -49,4 +49,21 @@ body > aside {
   text-shadow: 0 -4px;
 }
 
+#aside-content .asideTitle {
+  background-color: #2ECC71;
+  font-size: 22px;
+  padding-left: 25px;
+  height: 75px;
+  padding-top: 20px;
+  width: 100%;
+  color: #fdfdfd;
+}
+#aside-content .asideTitle .topMenu {
+  margin-right: 30px;
+  padding-bottom: 5px;
+  float: left;
+  cursor: pointer;
+  border-bottom: 2px solid #fdfdfd;
+}
+
 /*# sourceMappingURL=side.css.map */
