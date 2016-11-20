@@ -50,6 +50,7 @@ body > aside {
 }
 
 #aside-content {
+	font-size: 14px;
 	.asideTitle {
 		background-color: #2ECC71;
 		font-size: 22px;
@@ -77,10 +78,9 @@ body > aside {
 			padding: 0 10px;
 			line-height: 32px;
 			color: #555;
-			font-size: 14px;
 			margin: 0;
 			outline: 0;
-			font-family: "Segoe UI", "Microsoft Yahei", Arial;
+			font-size: 1rem;
 		}
 		input[type="search"]:focus {
 			border: 1px solid #3dde3d;
@@ -88,5 +88,12 @@ body > aside {
 		input:nth-of-type(2) {
 			margin-top: 15px;
 		}
+	}
+	#previewName {
+		width: 200px;
+		height: 60px;
+		color: #33C5C5;
+		text-align: center;
+		font-size: 1rem;
 	}
 }

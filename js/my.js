@@ -85,3 +85,47 @@ function searchBtnToggle() {
 	}
 }
 searchBtnToggle();
+//绘制圆形
+function drawCircle() {
+	var canvas = document.getElementById("mycanvas");
+	if (canvas.getContext) {
+		var ctx = canvas.getContext("2d");
+		ctx.beginPath();
+		//		ctx.strokeStyle = "#2ECC71";
+		ctx.fillStyle = "#2ECC71";
+		var circle = {
+			x: 100,
+			y: 70,
+			r: 50
+		};
+		ctx.arc(circle.x, circle.y, circle.r, 0, Math.PI * 2, true);
+		ctx.fill();
+	}
+}
+drawCircle();
+//圆形名称跟随input动态改变
+function changeCircleName() {
+	var search_border = document.getElementsByClassName("search-border")[0];
+	var input_2 = search_border.getElementsByTagName("input")[1];
+	var previewName = document.getElementById("previewName");
+	if (document.all) {
+		input_2.onpropertychange = function () {
+			if (input_2.value == "") {
+				previewName.innerHTML = "名称";
+			} else {
+				previewName.innerHTML = input_2.value;
+			}
+
+		}
+	} else {
+		input_2.oninput = function () {
+			if (input_2.value == "") {
+				previewName.innerHTML = "名称";
+			} else {
+				previewName.innerHTML = input_2.value;
+			}
+
+		}
+	}
+}
+changeCircleName();
