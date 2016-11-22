@@ -129,3 +129,18 @@ function changeCircleName() {
 	}
 }
 changeCircleName();
+//顶部加号鼠标点击动画
+function addBtnAnimation() {
+	var sideMenuControl = document.getElementById("sideMenuControl");
+	var tag = true;
+	sideMenuControl.onclick = function () {
+		if (tag) {
+			this.style["-webkit-transform"] = "rotate(135deg)";
+			tag = false;
+		} else {
+			this.style["-webkit-transform"] = "rotate(-90deg)";
+			tag = true;
+		}
+	}
+}
+addBtnAnimation();

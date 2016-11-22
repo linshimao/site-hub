@@ -33,21 +33,17 @@ body > aside {
 
 #wrap-side > label {
 	position: absolute;
-	top: 30px;
+	top: 18px;
 	right: 40px;
-	background: #f1103a;
-	border-radius: 50px;
-	color: #FFF;
+	background: url(../img/add.png) no-repeat;
+	background-size: 100%;
+	border-radius: 21px;
 	cursor: pointer;
 	display: block;
-	font-family: Courier New;
-	font-size: 25px;
-	font-weight: bold;
-	width: 30px;
-	height: 30px;
-	line-height: 35px;
-	text-align: center;
-	text-shadow: 0 -4px;
+	width: 40px;
+	height: 40px;
+	box-shadow: #e74c3c 0 0 10px;
+		transition: all .35s ease;
 }
 
 #sideMenuControl {
@@ -75,6 +71,7 @@ body > aside {
 	.search-border {
 		text-align: center;
 		margin-top: 52px;
+		margin-bottom: 10px;
 		input[type="search"] {
 			width: 250px;
 			height: 32px;
@@ -96,16 +93,19 @@ body > aside {
 	}
 	#previewName {
 		width: 200px;
-		height: 60px;
 		color: #33C5C5;
 		text-align: center;
-		font-size: 1rem;
+		font-size: 1.5rem;
+		margin-top: 10px;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
 	}
 	#iconBgColor {
 		margin-left: 50px;
 		width: 265px;
 		height: 80px;
-		margin-top: 40px;
+		margin-top: 25px;
 		.iconBgColor {
 			width: 30px;
 			height: 30px;
@@ -121,15 +121,35 @@ body > aside {
 			&:hover {
 				transform: scale(1.2);
 			}
-			
 		}
-		#colorPicker {
-			background-image: url(../img/color.png);
-			background-size: 100%;
-		}
-		#colorTransparent {
-			background-image: url(../img/transparent.png);
-			background-size: 100%;
+	}
+	#colorPicker {
+		background-image: url(../img/color.png);
+		background-size: 100%;
+	}
+	#colorTransparent {
+		background-image: url(../img/transparent.png);
+		background-size: 100%;
+	}
+	#addBtn {
+		margin-left: 50px;
+		width: 100%;
+		height: auto;
+		margin-top: 20px;
+		input[type="button"] {
+			width: 250px;
+			height: 35px;
+			line-height: 35px;
+			text-align: center;
+			letter-spacing: .3em;
+			margin: 0;
+			border: none;
+			background-color: #2ECC71;
+			color: #fdfdfd;
+			cursor: pointer;
+			font-size: 18px;
+			border-radius: 40px;
+			font-family: "Segoe UI", "Microsoft Yahei", Arial;
 		}
 	}
 }
