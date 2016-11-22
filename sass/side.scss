@@ -43,7 +43,7 @@ body > aside {
 	width: 40px;
 	height: 40px;
 	box-shadow: #e74c3c 0 0 10px;
-		transition: all .35s ease;
+	transition: all .35s ease;
 }
 
 #sideMenuControl {
@@ -92,7 +92,7 @@ body > aside {
 		}
 	}
 	#previewName {
-		width: 200px;
+		width: 150px;
 		color: #33C5C5;
 		text-align: center;
 		font-size: 1.5rem;
@@ -100,6 +100,7 @@ body > aside {
 		overflow: hidden;
 		white-space: nowrap;
 		text-overflow: ellipsis;
+		padding-left: 50px;
 	}
 	#iconBgColor {
 		margin-left: 50px;
