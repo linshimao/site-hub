@@ -114,7 +114,6 @@ function drawCircle() {
     ctx.fill();
   }
 }
-
 //圆形名称跟随input动态改变
 function changeCircleName() {
   var search_border = document.getElementsByClassName("search-border")[0];
@@ -166,5 +165,24 @@ function changeBgAndBorder() {
   $("#iconBgColor").on("click", ".iconBgColor", function () {
     $(".iconBgColor").css("borderColor", "transparent");
     this.style.borderColor = borderColorArray[$(this).index()];
+    //每次点击颜色再次绘制圆形
+    function drawCircle(color) {
+      var canvas = document.getElementById("mycanvas");
+      if (canvas.getContext) {
+        var ctx = canvas.getContext("2d");
+        ctx.beginPath();
+        ctx.fillStyle = color;
+        ctx.globalCompositeOperation = 'source-atop';
+        var circle = {
+          x: 100,
+          y: 70,
+          r: 50
+        };
+        ctx.arc(circle.x, circle.y, circle.r, 0, Math.PI * 2, true);
+        ctx.fill();
+      }
+    }
+    drawCircle(borderColorArray[$(this).index()]);
+    $("#previewName").css("color", borderColorArray[$(this).index()]);
   });
 }
