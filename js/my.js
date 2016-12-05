@@ -104,7 +104,7 @@ function drawCircle() {
     var ctx = canvas.getContext("2d");
     ctx.beginPath();
     //		ctx.strokeStyle = "#2ECC71";
-    ctx.fillStyle = "#2ECC71";
+    ctx.fillStyle = "rgb(26, 188, 156)";
     var circle = {
       x: 100,
       y: 70,
