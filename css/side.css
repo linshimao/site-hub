@@ -94,6 +94,7 @@ body > aside {
 }
 #aside-content #previewName {
   width: 150px;
+  height: 21px;
   color: #33C5C5;
   text-align: center;
   font-size: 1.5rem;
