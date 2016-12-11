@@ -23,6 +23,7 @@ function init() {
   changeCircleName(); //圆形名称跟随input动态改变
   addBtnAnimation(); //顶部加号鼠标点击动画
   changeBgAndBorder(); //小圆形被选中，添加border，并且改变绘制的圆形的填充色
+  changeSearchButtonHoverStyle(); //鼠标滑过改变searchButton样式
 }
 init();
 
@@ -71,32 +72,41 @@ function changeALine() {
 }
 
 
-
+//搜索框聚焦时
 function searchBtnToggle() {
+  var searchButton = document.getElementById("searchButton");
   var searchInput1 = document.getElementsByTagName("input")[0];
-  var searchInput2 = document.getElementsByTagName("input")[1];
   searchInput1.onclick = function () {
-    searchInput2.style.backgroundImage = "url(img/search_icon.png)";
-    searchInput2.style.backgroundRepeat = "no-repeat";
-    searchInput2.style.backgroundPosition = "center";
-    searchInput2.style.backgroundSize = "50%";
-    searchInput2.style.backgroundColor = "#41f084";
+    changeSearchButton();
   }
   searchInput1.onblur = function () {
-    searchInput2.style.backgroundColor = "#fff";
-  }
-  searchInput2.onmouseover = function () {
-    this.style.backgroundImage = "url(img/search_icon.png)";
-    this.style.backgroundRepeat = "no-repeat";
-    this.style.backgroundPosition = "center";
-    this.style.backgroundSize = "50%";
-    this.style.backgroundColor = "#2ECC71";
-  }
-  searchInput2.onmouseout = function () {
-    this.style.backgroundColor = "#fff";
+    searchButton.style.backgroundColor = "#fff";
   }
 }
 
+//改变searchButton的背景
+function changeSearchButton() {
+  var searchButton = document.getElementById("searchButton");
+  searchButton.style.backgroundImage = "url(img/search_icon.png)";
+  searchButton.style.backgroundRepeat = "no-repeat";
+  searchButton.style.backgroundPosition = "center";
+  searchButton.style.backgroundSize = "35%";
+  searchButton.style.backgroundColor = "#2ECC71";
+}
+//鼠标滑过改变searchButton样式
+function changeSearchButtonHoverStyle() {
+  var searchButton = document.getElementById("searchButton");
+  searchButton.onmouseover = function () {
+    this.style.backgroundImage = "url(img/search_icon.png)";
+    this.style.backgroundRepeat = "no-repeat";
+    this.style.backgroundPosition = "center";
+    this.style.backgroundSize = "35%";
+    this.style.backgroundColor = "#2ECC71";
+  };
+  searchButton.onmouseout = function () {
+    this.style.backgroundColor = "#fff";
+  };
+}
 //绘制圆形
 function drawCircle() {
   var canvas = document.getElementById("mycanvas");
